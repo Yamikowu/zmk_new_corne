@@ -265,7 +265,7 @@ layers:
   - RGB SPI
   - RGB SAI
   - RGB HUI
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -285,15 +285,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: default, h: toggle}
-  - {t: default, h: toggle}
-  - {t: default, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Alter, h: toggle}
-  - {t: Alter, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
+  - {t: default, h: toggle}
+  - {t: default, h: toggle}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Alter, h: toggle}
+  - {t: Alter, h: toggle}
+  - {t: Alter, h: toggle}
+  - {t: '$$mdi:backup-restore$$', type: bootloader}
   Lock:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
