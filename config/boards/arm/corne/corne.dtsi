@@ -29,7 +29,7 @@
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
 		label = "LEFT_ENCODER";
-		resolution = <4>;
+		resolution = <2>;
                  steps = <40>;
 		status = "disabled";
 	};
@@ -197,6 +197,7 @@
         };
     };
 };
+
 &pwm0 {
     status = "okay";
     pinctrl-0 = <&pwm0_default>;
