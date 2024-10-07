@@ -201,10 +201,10 @@
         System_layer {
             bindings = <
 &to 0              &bt BT_CLR       &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2       &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&ext_power EP_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI    &sys_reset   &trans  &trans  &trans  &trans  &trans  &trans
+&ext_power EP_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI    &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD    &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                    &sys_reset       &to 0            &to 0            &to 0              &trans       &to 4   &to 4   &trans
-                                                                                                          &bootloader
+                                    &bootloader      &to 0            &to 0            &sys_reset         &trans       &to 4   &to 4   &to 4
+                                                                                                          &sys_reset
             >;
 
             label = "System";
