@@ -196,7 +196,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  Alter:
+  Gaming:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -236,10 +236,10 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-caps$$'}
-  - PLAY PAUSE
-  - {t: System, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: default, h: toggle}
   - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
@@ -290,9 +290,9 @@ layers:
   - {t: default, h: toggle}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Alter, h: toggle}
-  - {t: Alter, h: toggle}
-  - {t: Alter, h: toggle}
+  - {t: Gaming, h: toggle}
+  - {t: Gaming, h: toggle}
+  - {t: Gaming, h: toggle}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   Lock:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -342,4 +342,4 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Alter, h: toggle}
+  - {t: Gaming, h: toggle}
