@@ -223,7 +223,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -239,11 +239,11 @@ layers:
   - {t: default, h: toggle}
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:keyboard-space$$
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-space$$', h: RIGHT GUI}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   System:
   - {t: default, h: toggle}
