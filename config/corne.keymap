@@ -184,17 +184,17 @@
             sensor-bindings = <&vol_encoder C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        Alter_layer {
-            display-name = "Default";
+        Gaming_layer {
+            display-name = "Gaming";
             bindings = <
-&kp TAB             &kp Q  &kp W             &kp E                 &kp R        &kp T          &kp UP_ARROW     &kp Y        &kp U        &kp I                     &kp O    &kp P     &kp BSPC
-&td0                &kp A  &kp S             &kp D                 &kp F        &kp G          &kp DOWN_ARROW   &kp H        &kp J        &kp K                     &kp L    &kp SEMI  &kp SQT
-&ht_long LCTRL ESC  &kp Z  &kp X             &kp C                 &kp V        &kp B          &kp LEFT_ARROW   &kp N        &kp M        &kp COMMA                 &kp DOT  &kp FSLH  &ht_long CAPSLOCK DELETE
-                           &kp C_PLAY_PAUSE  &ht_layer LEFT_ALT 5  &kp ENTER    &kp SPACE      &kp RIGHT_ARROW  &kp SPACE    &kp SPACE    &ht_long RIGHT_GUI SPACE
-                                                                                               &kp ENTER
+&kp TAB             &kp Q  &kp W   &kp E      &kp R        &kp T          &kp UP_ARROW     &kp Y        &kp U        &kp I                     &kp O    &kp P     &kp BSPC
+&td0                &kp A  &kp S   &kp D      &kp F        &kp G          &kp DOWN_ARROW   &kp H        &kp J        &kp K                     &kp L    &kp SEMI  &kp SQT
+&ht_long LCTRL ESC  &kp Z  &kp X   &kp C      &kp V        &kp B          &kp LEFT_ARROW   &kp N        &kp M        &kp COMMA                 &kp DOT  &kp FSLH  &ht_long CAPSLOCK DELETE
+                           &to 0   &kp SPACE  &kp SPACE    &kp ENTER      &kp RIGHT_ARROW  &kp SPACE    &kp SPACE    &ht_long RIGHT_GUI SPACE
+                                                                                           &kp ENTER
             >;
 
-            label = "Default";
+            label = "Gaming";
             sensor-bindings = <&scroll_encoder>;
         };
 
