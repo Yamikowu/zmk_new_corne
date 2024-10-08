@@ -113,11 +113,11 @@
     };
 
     macros {
-        quick_access: quick_access {
+        m0: m0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp Y &kp A &kp M &kp I &kp K &kp O &kp W &kp U &kp N9 &kp N4 &kp N0 &kp N1 &kp N0 &kp N2>;
-            label = "QUICK_ACCESS";
+            label = "M0";
         };
     };
 
@@ -157,7 +157,7 @@
 
             bindings = <
 &trans  &kp N1  &kp N2      &kp N3     &kp N4          &kp N5          &mmv MOVE_UP     &kp N6          &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
-&trans  &trans  &mkp LCLK   &mkp MCLK  &mkp RCLK       &mkp MB4        &mmv MOVE_DOWN   &kp PLUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&trans  &m0     &mkp LCLK   &mkp MCLK  &mkp RCLK       &mkp MB4        &mmv MOVE_DOWN   &kp PLUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_EQUAL
 &trans  &trans  &trans      &trans     &kp LEFT_SHIFT  &mkp MB5        &mmv MOVE_LEFT   &kp MINUS       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &kp KP_DOT
                 &kp C_MUTE  &to 0      &to 0           &kp KP_ENTER    &mmv MOVE_RIGHT  &kp KP_NUMLOCK  &kp KP_ENTER     &kp KP_NUMBER_0
                                                                        &mkp LCLK
