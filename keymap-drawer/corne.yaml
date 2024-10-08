@@ -90,12 +90,12 @@ layers:
   - KP DIVIDE
   - KP DOT
   - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: default, h: toggle}
   - {t: default, h: toggle, type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KP ENTER
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - KP NUMLOCK
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KP ENTER
   - KP 0
   - $$mdi:mouse-left-click-outline$$
   raise:
@@ -127,7 +127,7 @@ layers:
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -190,7 +190,7 @@ layers:
   - {t: Lock, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:apple-keyboard-shift$$', type: held}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -343,3 +343,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Gaming, h: toggle}
+combos:
+- p: [11, 12]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
