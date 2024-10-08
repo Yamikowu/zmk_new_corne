@@ -109,6 +109,7 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <11 12>;
+            layers = <0 2 3 4 1>;
         };
     };
 
