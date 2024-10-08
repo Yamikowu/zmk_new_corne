@@ -346,3 +346,4 @@ layers:
 combos:
 - p: [11, 12]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [default, raise, FN, Gaming, lower]

@@ -1946,10 +1946,6 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key bootloader"/>
 <use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="-9" y="-13" height="18" width="18.0" class="key bootloader tap glyph mdi:backup-restore"/>
 </g>
-<g class="combo enter combopos-0">
-<rect rx="6" ry="6" x="854" y="64" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="859" y="68" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
-</g>
 </g>
 </g>
 <g transform="translate(40, 2433)" class="layer-Lock">
@@ -2198,10 +2194,6 @@ rect.held, rect.combo.held {
 <a href="#Gaming">
 <text x="0" y="-4" class="key tap layer-activator">Gaming</text>
 </a><text x="0" y="24" class="key hold">toggle</text>
-</g>
-<g class="combo enter combopos-0">
-<rect rx="6" ry="6" x="854" y="64" width="28" height="26" class="combo enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="859" y="68" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
 </g>
 </g>
