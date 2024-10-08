@@ -56,7 +56,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <155>;
             hold-trigger-key-positions = <0 1 2 3 4 5 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 6>;
             flavor = "tap-preferred";
         };
@@ -103,6 +103,24 @@
         bindings = <&kp>, <&kp>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <11 12>;
+        };
+    };
+
+    macros {
+        quick_access: quick_access {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp A &kp M &kp I &kp K &kp O &kp W &kp U &kp N9 &kp N4 &kp N0 &kp N1 &kp N0 &kp N2>;
+            label = "QUICK_ACCESS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -129,7 +147,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "NUMBE";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -138,11 +156,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2      &kp N3     &kp N4          &kp N5      &mmv MOVE_UP     &kp N6          &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
-&trans  &trans  &mkp LCLK   &mkp MCLK  &mkp RCLK       &mkp MB4    &mmv MOVE_DOWN   &kp PLUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_EQUAL
-&trans  &trans  &trans      &trans     &kp LEFT_SHIFT  &mkp MB5    &mmv MOVE_LEFT   &kp MINUS       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &kp KP_DOT
-                &kp C_MUTE  &trans     &to 0           &trans      &mmv MOVE_RIGHT  &kp KP_NUMLOCK  &trans           &kp KP_NUMBER_0
-                                                                   &mkp LCLK
+&trans  &kp N1  &kp N2      &kp N3     &kp N4          &kp N5          &mmv MOVE_UP     &kp N6          &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
+&trans  &trans  &mkp LCLK   &mkp MCLK  &mkp RCLK       &mkp MB4        &mmv MOVE_DOWN   &kp PLUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_EQUAL
+&trans  &trans  &trans      &trans     &kp LEFT_SHIFT  &mkp MB5        &mmv MOVE_LEFT   &kp MINUS       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE    &kp KP_DOT
+                &kp C_MUTE  &to 0      &to 0           &kp KP_ENTER    &mmv MOVE_RIGHT  &kp KP_NUMLOCK  &kp KP_ENTER     &kp KP_NUMBER_0
+                                                                       &mkp LCLK
             >;
 
             label = "NUMBER";
@@ -161,7 +179,7 @@
             bindings = <
 &trans  &kp EXCL  &kp AT          &kp UP_ARROW    &kp DLLR         &kp PRCNT         &mmv MOVE_UP     &kp CARET    &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HASH          &mmv MOVE_DOWN   &kp MINUS    &kp PLUS   &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &none     &trans          &none           &none            &none             &mmv MOVE_LEFT   &kp UNDER    &kp EQUAL  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&trans  &none     &none           &none           &none            &none             &mmv MOVE_LEFT   &kp UNDER    &kp EQUAL  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                   &trans          &trans          &to 1            &kp LEFT_SHIFT    &mmv MOVE_RIGHT  &kp C_POWER  &trans     &trans
                                                                                      &mkp LCLK
             >;
@@ -173,11 +191,11 @@
         FN_layer {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5      &mmv MOVE_UP     &kp F6         &kp F7    &kp F8  &kp F9  &kp F10          &kp F11
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mkp MB4    &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME  &trans  &trans  &kp PRINTSCREEN  &kp F12
-&trans  &trans  &trans     &trans     &trans     &mkp MB5    &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp END   &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                &to 6      &trans     &trans     &trans      &mmv MOVE_RIGHT  &trans         &trans    &trans
-                                                             &mkp LCLK
+&trans  &kp F1  &kp F2     &kp F3     &kp F4     &kp F5            &mmv MOVE_UP     &kp F6         &kp F7    &kp F8  &kp F9  &kp F10          &kp F11
+&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &mkp MB4          &mmv MOVE_DOWN   &kp PAGE_UP    &kp HOME  &trans  &trans  &kp PRINTSCREEN  &kp F12
+&trans  &trans  &trans     &trans     &trans     &mkp MB5          &mmv MOVE_LEFT   &kp PAGE_DOWN  &kp END   &trans  &trans  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                &to 6      &trans     &trans     &kp LEFT_SHIFT    &mmv MOVE_RIGHT  &trans         &trans    &trans
+                                                                   &mkp LCLK
             >;
 
             label = "FN";
@@ -187,11 +205,11 @@
         Gaming_layer {
             display-name = "Gaming";
             bindings = <
-&kp TAB    &kp Q  &kp W   &kp E      &kp R        &kp T       &kp UP_ARROW     &kp Y        &kp U        &kp I       &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S   &kp D      &kp F        &kp G       &kp DOWN_ARROW   &kp H        &kp J        &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X   &kp C      &kp V        &kp B       &kp LEFT_ARROW   &kp N        &kp M        &kp COMMA   &kp DOT  &kp FSLH  &ht_long CAPSLOCK DELETE
-                  &to 0   &kp SPACE  &kp SPACE    &kp SPACE   &kp RIGHT_ARROW  &kp SPACE    &kp SPACE    &kp ENTER
-                                                              &kp ENTER
+&kp TAB    &kp Q  &kp W  &kp E      &kp R      &kp T        &kp UP_ARROW     &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&td0       &kp A  &kp S  &kp D      &kp F      &kp G        &kp DOWN_ARROW   &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp LEFT_ARROW   &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &ht_long CAPSLOCK DELETE
+                  &to 0  &kp SPACE  &kp SPACE  &kp SPACE    &kp RIGHT_ARROW  &kp SPACE  &kp SPACE  &kp ENTER
+                                                            &kp ENTER
             >;
 
             label = "Gaming";
@@ -200,10 +218,10 @@
 
         System_layer {
             bindings = <
-&to 0              &bt BT_CLR       &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2       &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&ext_power EP_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI    &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD    &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                    &bootloader      &to 0            &to 0            &sys_reset         &trans       &to 4   &to 4   &to 4
+&to 0              &bt BT_CLR       &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2       &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&ext_power EP_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&rgb_ug RGB_TOG    &rgb_ug RGB_BRD  &rgb_ug RGB_EFR  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                                    &bootloader      &to 0            &to 0            &sys_reset         &trans      &to 4   &to 4   &to 4
                                                                                                           &sys_reset
             >;
 
@@ -223,5 +241,4 @@
             label = "LOCK";
         };
     };
-
 };
